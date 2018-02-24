@@ -1,0 +1,11 @@
+.navbar {
+
+  @extend .z-depth-05;
+  background-color: white;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+
+  .navbar-brand {
+    color: rgba(0, 0, 0,.6);
+  }
+
+}

@@ -1,0 +1,16 @@
+
+.card {
+  .card-title {
+    font-family: $headface;
+    color: $font-color-head;
+    a {
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+      }
+    }
+  }
+  .card-body{
+    color:$font-color;
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "bazarlist";
+  src:url("../fonts/bazarlist.eot");
+  src:url("../fonts/bazarlist.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/bazarlist.woff") format("woff"),
+  url("../fonts/bazarlist.ttf") format("truetype"),
+  url("../fonts/bazarlist.svg#bazarlist") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "bazarlist" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo-solid:before {
+  content: "\61";
+}
+.icon-logo:before {
+  content: "\62";
+}

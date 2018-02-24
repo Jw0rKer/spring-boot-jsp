@@ -1,0 +1,14 @@
+
+.wrapper {
+  background: rgba(203, 203, 210, .15);
+  min-height: 100%;
+  direction: rtl;
+
+  > .footer {
+    border-top: 1px solid #e7e7e7;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+}

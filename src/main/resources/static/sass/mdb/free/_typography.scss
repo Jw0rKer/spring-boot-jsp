@@ -1,0 +1,95 @@
+$topface: "nika", "tahoma", Arial;
+$headface: "lalezar", "tahoma", Arial;
+
+$font-size-medium:              16px !default;
+$font-size-small:              14px !default;
+
+$font-color: rgb(67,67,67);
+$font-color-head: rgb(0,0,0);
+
+@font-face {
+  font-family: "nika";
+  src: url("../fonts/Nika-Regular.otf");
+  src: url("../fonts/Nika-Regular.otf") format("woff"),
+  url("../fonts/Nika-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lalezar";
+  src: url("../fonts/Lalezar-Regular.otf");
+  src: url("../fonts/Lalezar-Regular.otf") format("woff"),
+  url("../fonts/Lalezar-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: $topface;
+}
+
+.brand {
+  font-family: $headface;
+}
+
+
+
+//---------------------------------
+
+@each $key, $val in $grid-breakpoints {
+  @include media-breakpoint-up($key) {
+    $y: map-get($responsive-headings, $key);
+    @each $name,
+      $value in $y {
+      .#{$name}-responsive {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+@each $size, $length in $spacers {
+  .fs-#{$size} {
+    font-size: $length !important;
+  }
+}
+
+.divider-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  h2 {
+    margin-top: 5px;
+  }
+  &:before {
+    content: '';
+    height: 1.5px;
+    background: #c6c6c6;
+    flex: 1;
+    margin: 0 .45em 0 0;
+  }
+  &:after {
+    content: '';
+    height: 1.5px;
+    background: #c6c6c6;
+    flex: 1;
+    margin: 0 0 0 .45em;
+  }
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  border-left: .25rem solid #eceeef;
+  p {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
